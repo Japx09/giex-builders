@@ -29,13 +29,13 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section id="process" className="py-16 md:py-24 max-w-7xl mx-auto px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <section id="process" className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         {/* Left Column */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="lg:col-span-5 lg:sticky lg:top-28"
         >
@@ -46,11 +46,11 @@ export default function ProcessSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F0F0F] leading-[1.12] tracking-tight">
             A Streamlined Process for Lasting Peace of Mind
           </h2>
-          <p className="mt-5 text-[#525252] text-base md:text-lg leading-relaxed font-normal">
+          <p className="mt-4 sm:mt-5 text-[#525252] text-base md:text-lg leading-relaxed font-normal">
             Building should be an empowering milestone, not an emotional struggle. We structure every stage of the project around clear communication, honest timeline commitments, and direct engineer accountability.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-7 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
             <Link href="#contact" className="btn-primary group flex items-center gap-2">
               <span>Let&apos;s Talk</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -61,12 +61,12 @@ export default function ProcessSection() {
           </div>
 
           {/* Quick trust callout */}
-          <div className="mt-10 p-6 rounded-2xl bg-[#F4F3EE] border border-[#E2E0D8]">
+          <div className="mt-8 sm:mt-10 p-5 sm:p-6 rounded-2xl bg-[#F4F3EE] border border-[#E2E0D8]">
             <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-extrabold text-[#0F0F0F] mb-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#FACC15]" />
+              <CheckCircle2 className="w-4 h-4 text-[#FACC15] shrink-0" />
               <span>Dedicated OFW &amp; Distance Support</span>
             </div>
-            <p className="text-sm text-[#525252] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#525252] leading-relaxed">
               We handle 100% of municipal permits, bank appraisals, and send weekly video logs directly to your WhatsApp or Messenger.
             </p>
           </div>
@@ -75,24 +75,24 @@ export default function ProcessSection() {
         {/* Right Column: Stacked Process Cards with Connecting Progress Line */}
         <div className="lg:col-span-7 relative space-y-4 md:space-y-5">
           {/* Vertical connecting line */}
-          <div className="hidden sm:block absolute left-[49px] top-10 bottom-10 w-0.5 bg-[#E2E0D8] z-0" />
+          <div className="hidden sm:block absolute left-[45px] md:left-[49px] top-10 bottom-10 w-0.5 bg-[#E2E0D8] z-0" />
 
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-10 p-7 md:p-8 rounded-2xl md:rounded-3xl bg-[#F4F3EE] border border-[#E2E0D8] transition-all duration-300 hover:shadow-card hover:border-[#FACC15] flex gap-5 items-start"
+              className="relative z-10 p-5 sm:p-7 md:p-8 rounded-2xl md:rounded-3xl bg-[#F4F3EE] border border-[#E2E0D8] transition-all duration-300 hover:shadow-card hover:border-[#FACC15] flex gap-4 sm:gap-5 items-start"
             >
               {/* Yellow circle with bold dark number */}
-              <div className="w-11 h-11 rounded-full bg-[#FACC15] text-[#0F0F0F] flex items-center justify-center font-extrabold text-lg shrink-0 shadow-sm mt-0.5 border border-black/5 relative z-10 ring-4 ring-[#F4F3EE]">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#FACC15] text-[#0F0F0F] flex items-center justify-center font-extrabold text-base sm:text-lg shrink-0 shadow-sm mt-0.5 border border-black/5 relative z-10 ring-4 ring-[#F4F3EE]">
                 {step.number}
               </div>
 
               <div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#0F0F0F] mb-2 leading-snug">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#0F0F0F] mb-1.5 sm:mb-2 leading-snug">
                   {step.title}
                 </h3>
                 <p className="text-sm md:text-base text-[#525252] leading-relaxed font-normal">

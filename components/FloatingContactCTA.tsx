@@ -28,45 +28,63 @@ export default function FloatingContactCTA() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 p-2 pr-4 bg-[#0F0F0F] text-white rounded-full shadow-2xl border border-white/10 backdrop-blur-md"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center shadow-2xl"
         >
-          <a
-            href="https://wa.me/639460503038?text=Hello%20Engr.%20Besas,%20I%20am%20exploring%20a%20construction%20project%20in%20Negros."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2.5 group"
-          >
-            <div className="relative w-9 h-9 rounded-full bg-[#FACC15] flex items-center justify-center text-[#0F0F0F] shrink-0 font-bold shadow-sm transition-transform duration-300 group-hover:scale-105">
-              <MessageCircle className="w-4 h-4 fill-current" />
-              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-[#0F0F0F]" />
-            </div>
-            <div className="text-left">
-              <p className="text-[11px] uppercase tracking-wider text-[#A1A1A1] font-semibold leading-tight">
-                Engr. Besas Available
-              </p>
-              <p className="text-xs font-bold text-white group-hover:text-[#FACC15] transition-colors leading-tight">
-                Chat on WhatsApp
-              </p>
-            </div>
-          </a>
+          {/* Mobile view: Compact 48px FAB */}
+          <div className="sm:hidden flex items-center">
+            <a
+              href="https://wa.me/639460503038?text=Hello%20Engr.%20Besas,%20I%20am%20exploring%20a%20construction%20project%20in%20Negros."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative w-12 h-12 rounded-full bg-[#FACC15] flex items-center justify-center text-[#0F0F0F] font-bold shadow-xl border border-black/10 active:scale-95 transition-transform"
+              aria-label="Chat on WhatsApp"
+            >
+              <MessageCircle className="w-6 h-6 fill-current" />
+              <span className="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-[#0F0F0F] animate-ping" />
+              <span className="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-[#0F0F0F]" />
+            </a>
+          </div>
 
-          <div className="w-px h-5 bg-white/15 mx-1" />
+          {/* Tablet & Desktop view: Full Floating Status Pill */}
+          <div className="hidden sm:flex items-center gap-2.5 p-2 pr-4 bg-[#0F0F0F] text-white rounded-full border border-white/10 backdrop-blur-md">
+            <a
+              href="https://wa.me/639460503038?text=Hello%20Engr.%20Besas,%20I%20am%20exploring%20a%20construction%20project%20in%20Negros."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 group"
+            >
+              <div className="relative w-9 h-9 rounded-full bg-[#FACC15] flex items-center justify-center text-[#0F0F0F] shrink-0 font-bold shadow-sm transition-transform duration-300 group-hover:scale-105">
+                <MessageCircle className="w-4 h-4 fill-current" />
+                <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-[#0F0F0F]" />
+              </div>
+              <div className="text-left">
+                <p className="text-[11px] uppercase tracking-wider text-[#A1A1A1] font-semibold leading-tight">
+                  Engr. Besas Available
+                </p>
+                <p className="text-xs font-bold text-white group-hover:text-[#FACC15] transition-colors leading-tight">
+                  Chat on WhatsApp
+                </p>
+              </div>
+            </a>
 
-          <a
-            href="tel:09460503038"
-            className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-            aria-label="Direct Phone Call"
-          >
-            <Phone className="w-3.5 h-3.5" />
-          </a>
+            <div className="w-px h-5 bg-white/15 mx-1" />
 
-          <button
-            onClick={() => setDismissed(true)}
-            className="w-6 h-6 rounded-full text-[#666666] hover:text-white flex items-center justify-center transition-colors ml-0.5"
-            aria-label="Dismiss shortcut"
-          >
-            <X className="w-3.5 h-3.5" />
-          </button>
+            <a
+              href="tel:09460503038"
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+              aria-label="Direct Phone Call"
+            >
+              <Phone className="w-3.5 h-3.5" />
+            </a>
+
+            <button
+              onClick={() => setDismissed(true)}
+              className="w-6 h-6 rounded-full text-[#666666] hover:text-white flex items-center justify-center transition-colors ml-0.5"
+              aria-label="Dismiss shortcut"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

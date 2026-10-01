@@ -109,13 +109,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8A8A8A]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8A8A8A] text-center sm:text-left">
           <p>© {new Date().getFullYear()} Giex Builders. All rights reserved.</p>
-          <div className="flex gap-6 font-medium">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-2.5 sm:gap-6 font-medium">
             <span>PICE Member</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Pag-IBIG Accredited Partner</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>Kabankalan City, Philippines</span>
           </div>
         </div>

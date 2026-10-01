@@ -14,7 +14,7 @@ import FloatingContactCTA from "@/components/FloatingContactCTA";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-[#0F0F0F] selection:bg-[#FACC15] selection:text-[#0F0F0F] relative">
+    <div className="min-h-screen bg-[#FBFBFA] text-[#0F0F0F] selection:bg-[#FACC15] selection:text-[#0F0F0F] relative w-full max-w-full overflow-x-hidden">
       <ScrollProgressBar />
       <Navigation />
       <main>

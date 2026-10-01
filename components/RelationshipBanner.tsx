@@ -7,13 +7,13 @@ import { ArrowRight, Star, Heart } from "lucide-react";
 
 export default function RelationshipBanner() {
   return (
-    <section className="py-12 md:py-20 max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 md:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, margin: "-80px" }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="relative rounded-3xl md:rounded-[40px] overflow-hidden min-h-[460px] md:min-h-[540px] flex items-center shadow-card border border-[#E2E0D8]"
+        className="relative rounded-3xl md:rounded-[40px] overflow-hidden min-h-[440px] sm:min-h-[480px] md:min-h-[540px] flex items-center shadow-card border border-[#E2E0D8]"
       >
         {/* Full-width collaboration photo background */}
         <Image
@@ -23,34 +23,34 @@ export default function RelationshipBanner() {
           className="object-cover object-center"
         />
         {/* Soft dark overlay for text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/35" />
 
         {/* Content Overlay */}
-        <div className="relative z-10 p-8 sm:p-12 md:p-16 lg:p-20 max-w-3xl text-white">
-          <div className="inline-flex items-center gap-2 bg-[#FACC15] text-[#0F0F0F] px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider mb-6 shadow-sm">
+        <div className="relative z-10 p-6 sm:p-10 md:p-14 lg:p-20 max-w-3xl text-white">
+          <div className="inline-flex items-center gap-2 bg-[#FACC15] text-[#0F0F0F] px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider mb-5 sm:mb-6 shadow-sm">
             <Heart className="w-3.5 h-3.5 fill-current" />
             <span>DIRECT CLIENT CARE</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold leading-[1.15] tracking-tight text-white">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold leading-[1.18] sm:leading-[1.15] tracking-tight text-white">
             Tailored to your family&apos;s dreams &amp; engineered for lifelong confidence.
           </h2>
 
-          <p className="mt-6 text-base sm:text-lg text-[#CCCCCC] leading-relaxed max-w-xl font-normal">
+          <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-[#CCCCCC] leading-relaxed max-w-xl font-normal">
             We don&apos;t just build houses — we safeguard your hard-earned investment. Experience the confidence of working directly with a civil engineer who genuinely listens.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <Link href="#contact" className="btn-primary group flex items-center gap-2">
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4 sm:gap-6">
+            <Link href="#contact" className="btn-primary group flex items-center justify-center gap-2 w-full sm:w-auto text-xs sm:text-sm">
               <span>Start Your Project</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
             {/* Quick rating metric */}
-            <div className="flex items-center gap-2 text-sm text-[#CCCCCC]">
+            <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-[#CCCCCC]">
               <div className="flex text-[#FACC15]">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
+                  <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" />
                 ))}
               </div>
               <span className="font-bold text-white">5.0</span>

@@ -31,13 +31,13 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="services" className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="text-center max-w-3xl mx-auto mb-14 md:mb-20"
+        className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20"
       >
         <span className="badge-dark mb-4 inline-flex">
           <Wrench className="w-3.5 h-3.5 text-[#FACC15]" />
@@ -58,9 +58,9 @@ export default function ServicesGrid() {
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative h-[480px] sm:h-[540px] rounded-3xl overflow-hidden shadow-card border border-[#E2E0D8] flex flex-col justify-between p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+            className="group relative h-[420px] sm:h-[480px] md:h-[520px] rounded-3xl overflow-hidden shadow-card border border-[#E2E0D8] flex flex-col justify-between p-6 sm:p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
             {/* Background Image */}
             <Image

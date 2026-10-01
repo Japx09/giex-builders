@@ -19,18 +19,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="contact" className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="bg-[#0F0F0F] text-white rounded-3xl md:rounded-[40px] p-8 sm:p-12 md:p-16 lg:p-20 relative overflow-hidden border border-white/5"
+        className="bg-[#0F0F0F] text-white rounded-3xl md:rounded-[40px] p-6 sm:p-10 md:p-14 lg:p-20 relative overflow-hidden border border-white/5"
       >
         {/* Subtle yellow ambient glow */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FACC15]/10 blur-[130px] pointer-events-none" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start relative z-10">
           {/* Left Column: Direct Outreach & Location */}
           <div className="lg:col-span-6">
             <span className="badge-dark mb-5 inline-flex">
@@ -40,14 +40,14 @@ export default function ContactSection() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.15] text-white">
               Let&apos;s Have an Honest Conversation About Your Plans
             </h2>
-            <p className="mt-5 text-[#A1A1A1] text-base md:text-lg leading-relaxed font-normal">
+            <p className="mt-4 sm:mt-5 text-[#A1A1A1] text-base md:text-lg leading-relaxed font-normal">
               Whether you are ready to break ground next month or just exploring your budget, Engr. Giel Rex Besas is here to give you straightforward, technical advice without any sales pressure.
             </p>
 
-            <div className="mt-10 space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#FACC15] flex items-center justify-center text-[#0F0F0F] shrink-0 font-bold shadow-sm">
-                  <Phone className="w-5 h-5" />
+            <div className="mt-8 sm:mt-10 space-y-5 sm:space-y-6">
+              <div className="flex items-center gap-3.5 sm:gap-4">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#FACC15] flex items-center justify-center text-[#0F0F0F] shrink-0 font-bold shadow-sm">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-[#8A8A8A] font-bold">
@@ -55,22 +55,22 @@ export default function ContactSection() {
                   </p>
                   <a
                     href="tel:09460503038"
-                    className="text-xl sm:text-2xl font-extrabold text-white hover:text-[#FACC15] transition-colors"
+                    className="text-lg sm:text-2xl font-extrabold text-white hover:text-[#FACC15] transition-colors"
                   >
                     0946 050 3038
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#FACC15] shrink-0">
-                  <MapPin className="w-5 h-5" />
+              <div className="flex items-center gap-3.5 sm:gap-4">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 flex items-center justify-center text-[#FACC15] shrink-0">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-[#8A8A8A] font-bold">
                     Office Headquarters
                   </p>
-                  <p className="text-base text-white font-medium">
+                  <p className="text-sm sm:text-base text-white font-medium">
                     Coloso St., Brgy. 6, Kabankalan City, Negros Occidental 6111
                   </p>
                   <p className="text-xs text-[#8A8A8A] mt-0.5">
@@ -79,27 +79,27 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-[#FACC15] shrink-0">
-                  <Clock className="w-5 h-5" />
+              <div className="flex items-center gap-3.5 sm:gap-4">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 flex items-center justify-center text-[#FACC15] shrink-0">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-[#8A8A8A] font-bold">
                     Consultation Hours
                   </p>
-                  <p className="text-base text-white font-medium">
+                  <p className="text-sm sm:text-base text-white font-medium">
                     Monday – Saturday: 7:30 AM – 5:00 PM
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-10 pt-8 border-t border-white/10 flex flex-wrap gap-4">
+            <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/10 flex flex-wrap gap-4">
               <a
                 href="https://www.facebook.com/GiexBuilders/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary !bg-white/10 !text-white !border-white/10 hover:!bg-white/20"
+                className="btn-secondary !bg-white/10 !text-white !border-white/10 hover:!bg-white/20 text-xs sm:text-sm"
               >
                 Chat on Facebook Messenger
               </a>
@@ -107,7 +107,7 @@ export default function ContactSection() {
           </div>
 
           {/* Right Column: Quick Consultation Card */}
-          <div className="lg:col-span-6 bg-white text-[#0F0F0F] p-8 sm:p-10 rounded-3xl shadow-xl border border-white/10">
+          <div className="lg:col-span-6 bg-white text-[#0F0F0F] p-5 sm:p-7 md:p-10 rounded-3xl shadow-xl border border-white/10">
             {formSubmitted ? (
               <div className="text-center py-10">
                 <CheckCircle2 className="w-16 h-16 text-[#FACC15] mx-auto mb-4" />
